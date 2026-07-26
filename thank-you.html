@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cảm ơn — Mentor Linh sẽ gọi bạn · AI One</title>
+<meta name="description" content="Đăng ký thành công — Mentor Linh từ AI One sẽ gọi bạn trong 24 giờ để xác nhận cohort 01."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%233b82f6'/%3E%3Ctext x='50%25' y='52%25' font-family='Inter,Arial' font-size='16' font-weight='900' fill='white' text-anchor='middle' dominant-baseline='middle'%3EAI%3C/text%3E%3C/svg%3E"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{navy:{400:'#3b82f6',600:'#1e3a8a',900:'#0b1220'},gold:{400:'#fbbf24',500:'#f59e0b',600:'#d97706'}}}}</script>
+<style>body{font-family:'Inter',sans-serif;color:#0b1220;background:#0b1220}.gradient-text{background:linear-gradient(90deg,#fbbf24 0%,#f59e0b 50%,#fb923c 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.check-circle{width:96px;height:96px;background:linear-gradient(135deg,#22c55e 0%,#16a34a 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 36px rgba(34,197,94,0.40);animation:pop 0.6s cubic-bezier(0.34,1.56,0.64,1)}@keyframes pop{0%{transform:scale(0);opacity:0}100%{transform:scale(1);opacity:1}}</style>
+</head>
+<body class="antialiased">
+
+<div class="min-h-screen flex items-center justify-center px-6 py-12" style="background:radial-gradient(ellipse at 50% 20%,rgba(251,191,36,0.20) 0%,transparent 55%),radial-gradient(ellipse at 80% 80%,rgba(59,130,246,0.20) 0%,transparent 50%),linear-gradient(135deg,#0b1220 0%,#1e3a8a 60%,#3b82f6 100%);">
+
+  <div class="max-w-2xl w-full">
+    <!-- Logo AIOne (inline svg fallback) -->
+    <div class="text-center mb-6">
+      <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur">
+        <div class="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center text-white font-black">AI</div>
+        <span class="text-white font-extrabold tracking-wide">AI ONE · Back-Office Series</span>
+      </div>
+    </div>
+
+    <!-- Card cảm ơn -->
+    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+      <!-- Top accent strip -->
+      <div class="h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-amber-500"></div>
+
+      <div class="p-8 md:p-12 text-center">
+        <!-- Check animation -->
+        <div class="check-circle mx-auto mb-6">
+          <i class="fas fa-check text-white text-5xl"></i>
+        </div>
+
+        <p class="inline-block px-4 py-1 rounded-full text-xs font-extrabold tracking-widest text-green-700 bg-green-100 mb-3">✅ ĐÃ GỬI THÀNH CÔNG</p>
+        <h1 class="text-3xl md:text-5xl font-black text-navy-900 leading-tight mb-4">
+          Cảm ơn <span id="greet-name" class="gradient-text">bạn</span>!<br/>Mentor Linh sẽ gọi trong 24h.
+        </h1>
+        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+          Thông tin của bạn vừa được ghi vào <strong class="text-navy-900">Google Sheet private của AI One</strong>.
+          Trong 24 giờ tới, <strong>Mentor Linh (CEO AI One)</strong> sẽ gọi trực tiếp để xác nhận cohort 01.
+        </p>
+
+        <!-- Recap chi tiết 5 trường user vừa nhập -->
+        <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-6 my-8 text-left">
+          <p class="text-xs font-extrabold text-navy-600 tracking-widest mb-3 flex items-center justify-center gap-2">
+            <i class="fas fa-clipboard-check"></i> THÔNG TIN BẠN ĐÃ GỬI
+          </p>
+          <dl class="space-y-2 text-sm">
+            <div class="flex justify-between border-b border-slate-200 pb-2"><dt class="text-slate-500 font-semibold">Email:</dt><dd id="r-email" class="text-navy-900 font-bold text-xs break-all">—</dd></div>
+            <div class="flex justify-between border-b border-slate-200 pb-2"><dt class="text-slate-500 font-semibold">Họ tên:</dt><dd id="r-name" class="text-navy-900 font-bold">—</dd></div>
+            <div class="flex justify-between border-b border-slate-200 pb-2"><dt class="text-slate-500 font-semibold">SĐT:</dt><dd id="r-phone" class="text-navy-900 font-bold">—</dd></div>
+            <div class="flex justify-between border-b border-slate-200 pb-2"><dt class="text-slate-500 font-semibold">Công ty:</dt><dd id="r-company" class="text-navy-900 font-bold">—</dd></div>
+            <div class="flex justify-between border-b border-slate-200 pb-2"><dt class="text-slate-500 font-semibold">Quy mô:</dt><dd id="r-size" class="text-navy-900 font-bold">—</dd></div>
+            <div class="flex justify-between border-b border-slate-200 pb-2"><dt class="text-slate-500 font-semibold">Use-case:</dt><dd id="r-usecase" class="text-navy-900 font-bold text-xs">—</dd></div>
+            <div class="flex justify-between items-start pt-1"><dt class="text-slate-500 font-semibold shrink-0">Kỳ vọng:</dt><dd id="r-expectation" class="text-navy-900 font-bold italic text-right max-w-xs">—</dd></div>
+          </dl>
+        </div>
+
+        <!-- Tiếp theo -->
+        <p class="text-slate-700 leading-relaxed mb-6">
+          Trong lúc chờ Mentor gọi, bạn có thể:
+        </p>
+        <div class="grid sm:grid-cols-2 gap-3 mb-8">
+          <a href="index.html" class="flex items-center gap-3 px-5 py-3 bg-blue-50 hover:bg-blue-100 rounded-xl text-blue-700 font-bold text-sm transition border-2 border-blue-200">
+            <i class="fas fa-book-open text-lg"></i>
+            <span class="text-left"><span class="block">Đọc lại lộ trình</span><span class="text-[11px] text-blue-500 font-semibold">6 buổi × 3 giờ</span></span>
+          </a>
+          <a href="/cdn-cgi/l/email-protection#bfd3d6d1d791d1d8cac6dad1ffded6d0d1da91dcd0d291c9d180cccaddd5dadccb82e4fcd0d7d0cdcb9a8d8f8f8ee29a8d8ffc7c1dca9a8d8fd75e0430d69a8d8fcbcd790f5e0424dc9a8d8fddca5e042ad69a8d8fd85e0432d6" class="flex items-center gap-3 px-5 py-3 bg-amber-50 hover:bg-amber-100 rounded-xl text-amber-700 font-bold text-sm transition border-2 border-amber-200">
+            <i class="fas fa-envelope text-lg"></i>
+            <span class="text-left"><span class="block">Gửi mail trước</span><span class="text-[11px] text-amber-500 font-semibold"><span class="__cf_email__" data-cfemail="9bf7f2f5f3b5f5fceee2fef5dbfaf2f4f5feb5f8f4f6b5edf5">[email&#160;protected]</span></span></span>
+          </a>
+        </div>
+
+        <!-- CTA cuối -->
+        <div class="bg-gradient-to-br from-navy-900 to-blue-700 text-white rounded-2xl p-6 mt-8">
+          <p class="text-xs font-extrabold text-gold-400 tracking-widest mb-2">📌 DÀNH CHO COHORT 01</p>
+          <p class="text-lg font-bold leading-snug mb-3">Chốt trong <span class="gradient-text">13 ngày</span> · Lớp 15–18 HV</p>
+          <p class="text-blue-200 text-sm leading-relaxed">
+            Nếu không nhận cuộc gọi trong 24h, vui lòng gọi trực tiếp <strong class="text-white">0936 999 217</strong> (Mentor Linh) để được ưu tiên.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <p class="text-center text-blue-200 text-xs mt-6">
+      © 2026 AI ONE · CÔNG TY TNHH GIẢI PHÁP PHẦN MỀM AI ONE · oneai.com.vn
+    </p>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ===== ĐỌC URL params (router từ landing page) =====
+(function(){
+  const p = new URLSearchParams(location.search);
+  const set = (id, key) => {
+    const v = p.get(key);
+    if (v) document.getElementById(id).textContent = v;
+  };
+  set('r-email','email');
+  set('r-name','name');
+  set('r-phone','phone');
+  set('r-company','company');
+  set('r-size','size');
+  set('r-usecase','usecase');
+  set('r-expectation','expectation');
+  // Personalize greeting
+  const nm = p.get('name');
+  if (nm) {
+    const first = nm.split(' ')[0];
+    document.getElementById('greet-name').textContent = first;
+  }
+})();
+</script>
+
+</body>
+</html>
+<script src='https://www.genspark.ai/slide-inner.js?_v=1'></script>
